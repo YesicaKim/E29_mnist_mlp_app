@@ -15,7 +15,7 @@ def index():
 def healthCheck():
    return "", 200
 
-@app.route("/image", methods = ['POST', 'GET'])
+@app.route("/image", methods = ['POST'])
 def get_result():
    if request.method == "POST":
        width, height = 28, 28
