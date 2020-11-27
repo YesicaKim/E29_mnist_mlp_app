@@ -37,27 +37,28 @@ y_train = keras.utils.to_categorical(y_train, num_classes)
 y_test = keras.utils.to_categorical(y_test, num_classes)
 
 # mlp model for training
-model = Sequential()
-model.add(Dense(512, activation='relu', input_shape=(784,)))
-model.add(Dropout(0.2))
-model.add(Dense(512, activation='relu'))
-model.add(Dropout(0.2))
-model.add(Dense(num_classes, activation='softmax'))
+# model = Sequential()
+# model.add(Dense(512, activation='relu', input_shape=(784,)))
+# model.add(Dropout(0.2))
+# model.add(Dense(512, activation='relu'))
+# model.add(Dropout(0.2))
+# model.add(Dense(num_classes, activation='softmax'))
 
-model.summary()
+# model.summary()
 
-model.compile(loss='categorical_crossentropy',
-              optimizer=RMSprop(),
-              metrics=['accuracy'])
+# model.compile(loss='categorical_crossentropy',
+#               optimizer=RMSprop(),
+#               metrics=['accuracy'])
 
-history = model.fit(x_train, y_train,
-                    batch_size=batch_size,
-                    verbose=1,
-                    validation_data=(x_test, y_test))
+# history = model.fit(x_train, y_train,
+#                     batch_size=batch_size,
+#                     epochs=epochs,
+#                     verbose=1,
+#                     validation_data=(x_test, y_test))
 
 # save model here
-print('saving model...')
-model.save('models')
+# print('saving model...')
+# model.save('models')
 
 # load model
 print('Loading model...')
