@@ -55,7 +55,7 @@ history = model.fit(x_train, y_train,
                     verbose=1,
                     validation_data=(x_test, y_test))
 
-save model here
+# save model here
 print('saving model...')
 model.save('models')
 
